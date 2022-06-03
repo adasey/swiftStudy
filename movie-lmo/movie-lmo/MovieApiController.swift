@@ -22,6 +22,8 @@ struct  DailyBoxOfficeList : Codable {
 }
 
 public class MovieApiController {
+    final var viewController : ViewController?
+    
     let TARGETDATE = "&targetDt="
     let defaultApiPath = "https://kobis.or.kr/kobisopenapi/webservice/rest/boxoffice/searchDailyBoxOfficeList.json?key=e1c6780d66859cb59abf4cf5d92b5ae2"
     
