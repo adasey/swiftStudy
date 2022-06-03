@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5CCAE469284A0EE100F96F2A /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CCAE468284A0EE100F96F2A /* MapViewController.swift */; };
 		8F925B7C283DBCB9008F0552 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F925B7B283DBCB9008F0552 /* AppDelegate.swift */; };
 		8F925B7E283DBCB9008F0552 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F925B7D283DBCB9008F0552 /* SceneDelegate.swift */; };
 		8F925B80283DBCB9008F0552 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F925B7F283DBCB9008F0552 /* ViewController.swift */; };
@@ -19,6 +20,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		5CCAE468284A0EE100F96F2A /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		8F925B78283DBCB9008F0552 /* movie-lmo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "movie-lmo.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8F925B7B283DBCB9008F0552 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8F925B7D283DBCB9008F0552 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -72,6 +74,7 @@
 				8F925B90283DBF22008F0552 /* MovieApiController.swift */,
 				8F925B93283DC419008F0552 /* MyTableViewCell.swift */,
 				8FA81F332849D0F600998A12 /* DetailViewController.swift */,
+				5CCAE468284A0EE100F96F2A /* MapViewController.swift */,
 			);
 			path = "movie-lmo";
 			sourceTree = "<group>";
@@ -152,6 +155,7 @@
 				8F925B94283DC419008F0552 /* MyTableViewCell.swift in Sources */,
 				8F925B7E283DBCB9008F0552 /* SceneDelegate.swift in Sources */,
 				8FA81F342849D0F600998A12 /* DetailViewController.swift in Sources */,
+				5CCAE469284A0EE100F96F2A /* MapViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

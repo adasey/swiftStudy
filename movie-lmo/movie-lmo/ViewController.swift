@@ -73,6 +73,15 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         return day
     }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        guard let dest = segue.destination as? DetailViewController else {
+            return
+        }
+        let myIndexPath = table.indexPathForSelectedRow!
+        let row = myIndexPath.row
+        dest.movieName = (apiCtrl.movieData?.boxOfficeResult.dailyBoxOfficeList[row].movieNm)!
+    }
+    
     func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
         return "박스오피스 영화진흥위원회제공:" + makeYesterdayString()
     }
