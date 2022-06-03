@@ -8,12 +8,9 @@
 import UIKit
 
 class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
-    
-    let apiCtrl = MovieApiController()
-    
-    open var refreshControl : UIRefreshControl?
-
     @IBOutlet weak var table: UITableView!
+    
+    let apiCtrl = MovieApiEntity()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -50,14 +47,14 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     }
     
     func JSONdataDecoder(_ JSONData: Data) {
-        let dataString = String(data: JSONData, encoding: .utf8)
-        print(dataString!)
+//        let dataString = String(data: JSONData, encoding: .utf8)
+//        print(dataString!)
         let decoder = JSONDecoder()
         do {
             let decodedData = try decoder.decode(MovieData.self, from: JSONData)
             apiCtrl.movieData = decodedData
             DispatchQueue.main.async {
-                self.table?.reloadData()
+                self.table.reloadData()
             }
         }
         catch {

@@ -21,7 +21,7 @@ struct  DailyBoxOfficeList : Codable {
     let audiAcc : String
 }
 
-public class MovieApiController {
+public class MovieApiEntity {
     final var viewController : ViewController?
     
     let TARGETDATE = "&targetDt="
