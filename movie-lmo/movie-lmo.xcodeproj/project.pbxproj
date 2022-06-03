@@ -15,6 +15,7 @@
 		8F925B88283DBCBA008F0552 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8F925B86283DBCBA008F0552 /* LaunchScreen.storyboard */; };
 		8F925B91283DBF22008F0552 /* MovieApiController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F925B90283DBF22008F0552 /* MovieApiController.swift */; };
 		8F925B94283DC419008F0552 /* MyTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F925B93283DC419008F0552 /* MyTableViewCell.swift */; };
+		8FA81F342849D0F600998A12 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FA81F332849D0F600998A12 /* DetailViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		8F925B89283DBCBA008F0552 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8F925B90283DBF22008F0552 /* MovieApiController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieApiController.swift; sourceTree = "<group>"; };
 		8F925B93283DC419008F0552 /* MyTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyTableViewCell.swift; sourceTree = "<group>"; };
+		8FA81F332849D0F600998A12 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -69,6 +71,7 @@
 				8F925B89283DBCBA008F0552 /* Info.plist */,
 				8F925B90283DBF22008F0552 /* MovieApiController.swift */,
 				8F925B93283DC419008F0552 /* MyTableViewCell.swift */,
+				8FA81F332849D0F600998A12 /* DetailViewController.swift */,
 			);
 			path = "movie-lmo";
 			sourceTree = "<group>";
@@ -148,6 +151,7 @@
 				8F925B7C283DBCB9008F0552 /* AppDelegate.swift in Sources */,
 				8F925B94283DC419008F0552 /* MyTableViewCell.swift in Sources */,
 				8F925B7E283DBCB9008F0552 /* SceneDelegate.swift in Sources */,
+				8FA81F342849D0F600998A12 /* DetailViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
