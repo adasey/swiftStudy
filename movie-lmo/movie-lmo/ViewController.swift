@@ -73,13 +73,10 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         return day
     }
     
-<<<<<<< HEAD
     func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
         return "박스오피스 영화진흥위원회제공:" + makeYesterdayString()
     }
-    
-=======
->>>>>>> 6384854 (before file pull)
+
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return 10
     }
@@ -105,10 +102,5 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     func numberOfSections(in tableView: UITableView) -> Int {
         return 1
     }
-    
-//    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-//        <#code#>
-//    }
-
 }
 
