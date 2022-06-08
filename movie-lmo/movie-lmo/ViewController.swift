@@ -9,6 +9,7 @@ import UIKit
 
 class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     @IBOutlet weak var table: UITableView!
+    @IBOutlet weak var youtubeOnOff: UISwitch!
     
     let apiCtrl = MovieApiEntity()
     
@@ -68,6 +69,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         }
         let myIndexPath = table.indexPathForSelectedRow!
         let row = myIndexPath.row
+        dest.isOn = youtubeOnOff.isOn
         dest.movieName = (apiCtrl.movieData?.boxOfficeResult.dailyBoxOfficeList[row].movieNm)!
     }
     

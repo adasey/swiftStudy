@@ -12,15 +12,21 @@ class DetailViewController: UIViewController {
     @IBOutlet weak var webView: WKWebView!
     
     var movieName = "영화순위"
+    var isOn = false
     var naverUrl = "https://search.naver.com/search.naver?where=nexearch&sm=top_hty&fbm=1&ie=utf8&query="
+    var youtubeUrl = "https://www.youtube.com/results?search_query="
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        print(movieName)
-        
         naverUrl += movieName
+        youtubeUrl += movieName
+        
+        var encodedUrl = naverUrl.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed)!
 
-        let encodedUrl = naverUrl.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed)!
+        if (isOn) {
+            encodedUrl = youtubeUrl.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed)!
+        }
+        
         guard let url = URL(string: encodedUrl) else { return }
         let request = URLRequest(url: url)
         

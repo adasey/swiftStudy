@@ -18,10 +18,10 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="20" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="ypt-y3-Xqi">
-                                <rect key="frame" x="0.0" y="88" width="414" height="725"/>
+                                <rect key="frame" x="0.0" y="127" width="414" height="686"/>
                                 <color key="backgroundColor" red="0.030406744843720693" green="0.098565429249003633" blue="0.16951916881443296" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <color key="separatorColor" red="0.56903939640000001" green="0.76421749959999996" blue="0.92737193939999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <inset key="separatorInset" minX="20" minY="0.0" maxX="10" maxY="0.0"/>
+                                <inset key="separatorInset" minX="15" minY="0.0" maxX="20" maxY="0.0"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="myCell" rowHeight="122" id="NdV-ZU-pnD" customClass="MyTableViewCell" customModule="movie_lmo" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="414" height="122"/>
@@ -64,7 +64,7 @@
                                                         <constraint firstAttribute="height" constant="34" id="dSK-Mb-f7g"/>
                                                     </constraints>
                                                     <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                                    <nil key="textColor"/>
+                                                    <color key="textColor" systemColor="systemBackgroundColor"/>
                                                     <nil key="highlightedColor"/>
                                                     <userDefinedRuntimeAttributes>
                                                         <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
@@ -116,20 +116,34 @@
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
+                            <switch autoresizesSubviews="NO" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" title="youtube" translatesAutoresizingMaskIntoConstraints="NO" id="rHM-LF-4KF">
+                                <rect key="frame" x="361" y="93" width="49" height="31"/>
+                            </switch>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Youtube" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2mq-bt-sFf">
+                                <rect key="frame" x="290" y="98" width="63" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="ypt-y3-Xqi" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="JLe-sx-cCO"/>
-                            <constraint firstItem="ypt-y3-Xqi" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="OSA-0Y-Ggn"/>
-                            <constraint firstAttribute="trailing" secondItem="ypt-y3-Xqi" secondAttribute="trailing" id="RSc-Ac-L9c"/>
-                            <constraint firstItem="ypt-y3-Xqi" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="fKn-s4-L6o"/>
+                            <constraint firstItem="rHM-LF-4KF" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="5" id="4Jd-2e-5Di"/>
+                            <constraint firstItem="ypt-y3-Xqi" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="IKs-up-z5z"/>
+                            <constraint firstItem="2mq-bt-sFf" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="290" id="KVg-SX-RI4"/>
+                            <constraint firstItem="rHM-LF-4KF" firstAttribute="leading" secondItem="2mq-bt-sFf" secondAttribute="trailing" constant="8" id="LFy-aL-piC"/>
+                            <constraint firstItem="ypt-y3-Xqi" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="MiC-Md-cqN"/>
+                            <constraint firstItem="2mq-bt-sFf" firstAttribute="centerY" secondItem="rHM-LF-4KF" secondAttribute="centerY" id="Okf-Pa-1D9"/>
+                            <constraint firstItem="ypt-y3-Xqi" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Y1a-j9-8pR"/>
+                            <constraint firstItem="ypt-y3-Xqi" firstAttribute="top" secondItem="rHM-LF-4KF" secondAttribute="bottom" constant="3" id="rtt-dv-alj"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="box office" image="pencil" catalog="system" id="piC-X1-4SL" userLabel="box office"/>
                     <navigationItem key="navigationItem" id="GUW-Ui-KfK"/>
                     <connections>
                         <outlet property="table" destination="ypt-y3-Xqi" id="8pC-Ye-Qrb"/>
+                        <outlet property="youtubeOnOff" destination="rHM-LF-4KF" id="bJ2-pD-b8I"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
