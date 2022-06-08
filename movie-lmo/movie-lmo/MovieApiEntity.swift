@@ -17,6 +17,7 @@ struct  BoxOfficeResult : Codable {
 
 struct  DailyBoxOfficeList : Codable {
     let movieNm : String
+    let openDt : String
     let audiCnt : String
     let audiAcc : String
 }
@@ -43,5 +44,21 @@ public class MovieApiEntity {
     
     func setDate(date: String) {
         self.yesterDate = date
+    }
+    
+    func makeYesterdayString() -> String {
+        let y = Calendar.current.date(byAdding: .day, value: -1, to: Date())!
+        let dateF = DateFormatter()
+        dateF.dateFormat = "yyyyMMdd"
+        let day = dateF.string(from: y)
+        return day
+    }
+    
+    func yesterdayString() -> String {
+        let y = Calendar.current.date(byAdding: .day, value: -1, to: Date())!
+        let dateF = DateFormatter()
+        dateF.dateFormat = "yyyy-MM-dd"
+        let day = dateF.string(from: y)
+        return day
     }
 }

@@ -11,7 +11,7 @@ import WebKit
 class MapViewController: UIViewController {
     @IBOutlet var webView: WKWebView!
     
-    let mapUrl = "https://map.naver.com/v5/search/%EC%98%81%ED%99%94%EA%B4%80"
+    let mapUrl = "https://m.map.naver.com/search2/search.naver?query=%EC%98%81%ED%99%94%EA%B4%80&sm=hty&style=v5"
     
     override func viewDidLoad() {
         super.viewDidLoad()

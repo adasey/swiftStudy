@@ -19,7 +19,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         table.delegate = self
         table.dataSource = self
         
-        apiCtrl.setApiDateURL(self.makeYesterdayString())
+        apiCtrl.setApiDateURL(self.apiCtrl.makeYesterdayString())
         getData()
     }
     
@@ -62,14 +62,6 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         }
     }
     
-    func makeYesterdayString() -> String {
-        let y = Calendar.current.date(byAdding: .day, value: -1, to: Date())!
-        let dateF = DateFormatter()
-        dateF.dateFormat = "yyyyMMdd"
-        let day = dateF.string(from: y)
-        return day
-    }
-    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         guard let dest = segue.destination as? DetailViewController else {
             return
@@ -80,7 +72,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     }
     
     func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-        return "박스오피스 영화진흥위원회제공:" + makeYesterdayString()
+        return "박스오피스 영화진흥위원회제공:" + self.apiCtrl.yesterdayString()
     }
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -91,15 +83,22 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         let cell = tableView.dequeueReusableCell(withIdentifier: "myCell", for: indexPath) as! MyTableViewCell
         cell.movieName.text = apiCtrl.movieData?.boxOfficeResult.dailyBoxOfficeList[indexPath.row].movieNm
         
+        cell.openDate.text = apiCtrl.movieData?.boxOfficeResult.dailyBoxOfficeList[indexPath.row].openDt
+        
+        let numF = NumberFormatter()
+        numF.numberStyle = .decimal
+        
         if let Count = apiCtrl.movieData?.boxOfficeResult.dailyBoxOfficeList[indexPath.row].audiCnt {
-            let numF = NumberFormatter()
-            numF.numberStyle = .decimal
-            let reAudi = Int(Count)!
-            let result = numF.string(for: reAudi)! + "명"
-            cell.audiCount.text = "어제 : \(result)"
+            let reCount = Int(Count)!
+            let resultCount = numF.string(for: reCount)! + "명"
+            cell.audiCount.text = "어제 : \(resultCount)"
         }
         if let Acc = apiCtrl.movieData?.boxOfficeResult.dailyBoxOfficeList[indexPath.row].audiAcc {
-            cell.audiAccumulate.text = "누적 : \(Acc)명"
+            let numF = NumberFormatter()
+            numF.numberStyle = .decimal
+            let reAudi = Int(Acc)!
+            let resultTotal = numF.string(for: reAudi)! + "명"
+            cell.audiAccumulate.text = "누적 : \(resultTotal)"
         }
         
         return cell

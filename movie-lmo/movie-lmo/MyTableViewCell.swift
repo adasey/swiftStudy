@@ -8,6 +8,8 @@
 import UIKit
 
 class MyTableViewCell: UITableViewCell {
+    @IBOutlet weak var openDate: UILabel!
+    
     @IBOutlet weak var movieName: UILabel!
     
     @IBOutlet weak var audiCount: UILabel!
